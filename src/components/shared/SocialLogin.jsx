@@ -1,8 +1,21 @@
 import { AiFillGoogleCircle } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import useAuthContext from "../../hooks/useAuth";
 
 const SocialLogin = () => {
-  const handleSocialLogin = () => {};
+  const { googleLogin } = useAuthContext();
+  const location = useLocation();
+  const navigate = useNavigate();
+  const handleSocialLogin = () => {
+    googleLogin()
+      .then(res => {
+        console.log(res);
+        navigate(location?.state || "/");
+      })
+      .catch(err => {
+        console.log(err.message);
+      });
+  };
 
   return (
     <div>

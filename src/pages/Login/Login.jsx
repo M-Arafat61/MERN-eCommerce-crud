@@ -1,15 +1,45 @@
-import { Link } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Navbar from "../../components/shared/Navbar";
 import Footer from "../../components/shared/Footer";
 import SocialLogin from "../../components/shared/SocialLogin";
+import useAuthContext from "../../hooks/useAuth";
 
 const Login = () => {
+  const { userLogin } = useAuthContext();
+  const location = useLocation();
+  const navigate = useNavigate();
   const handleLogIn = e => {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
     const email = form.get("email");
     const password = form.get("password");
     console.log(email, password);
+
+    userLogin(email, password)
+      .then(res => {
+        console.log(res.user);
+        e.target.reset();
+        navigate(location?.state || "/");
+      })
+      .catch(err => {
+        return toast.error(`${err.message}`, {
+          style: {
+            color: "white",
+            fontSize: "20px",
+            backgroundColor: "red",
+          },
+          position: "top-center",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: false,
+          progress: undefined,
+          theme: "colored",
+        });
+      });
   };
   return (
     <div className='max-w-6xl m-auto'>
@@ -65,6 +95,7 @@ const Login = () => {
         </div>
       </div>
       <Footer></Footer>
+      <ToastContainer></ToastContainer>
     </div>
   );
 };

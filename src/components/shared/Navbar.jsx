@@ -1,7 +1,9 @@
 import { Link, NavLink } from "react-router-dom";
 import { GiDreamCatcher } from "react-icons/gi";
+import useAuthContext from "../../hooks/useAuth";
 
 const Navbar = () => {
+  const { user } = useAuthContext();
   return (
     <div className='navbar bg-base-100'>
       <div className='navbar-start'>
@@ -24,7 +26,7 @@ const Navbar = () => {
           </label>
           <ul
             tabIndex={0}
-            className='menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52'
+            className='menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-36'
           >
             <li>
               <a>Home</a>
@@ -37,12 +39,12 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <div className='flex items-center'>
+        <div className='flex items-center gap-1'>
           <GiDreamCatcher className='text-4xl'></GiDreamCatcher>
           <h3 className='font-semibold'>Elite Emporium</h3>
         </div>
       </div>
-      <div className='navbar-center'>
+      <div className='hidden md:flex navbar-center'>
         <NavLink
           to='/'
           className={({ isActive }) =>
@@ -77,25 +79,27 @@ const Navbar = () => {
 
       {/* Navbar end */}
       <div className='navbar-end'>
-        {/* <button className='btn btn-ghost btn-circle'>
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            className='h-5 w-5'
-            fill='none'
-            viewBox='0 0 24 24'
-            stroke='currentColor'
-          >
-            <path
-              strokeLinecap='round'
-              strokeLinejoin='round'
-              strokeWidth='2'
-              d='M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z'
-            />
-          </svg>
-        </button> */}
-        <Link to='/login'>
-          <button className='btn btn-outline btn-secondary'>Login</button>
-        </Link>
+        {user && user?.protoURL !== null ? (
+          <>
+            <div className='flex flex-col items-end'>
+              <label tabIndex='0' className='btn btn-ghost btn-circle avatar'>
+                <div className='w-12 rounded-full'>
+                  <img src={user?.photoURL} />
+                </div>
+              </label>
+
+              <p className='text-lg'>{user.displayName}</p>
+              <Link>
+                <button className='btn btn-ghost'>Logout</button>
+              </Link>
+            </div>
+          </>
+        ) : (
+          // <img src={Avatar} />
+          <Link to='/login'>
+            <button className='btn btn-outline '>Login</button>
+          </Link>
+        )}
       </div>
     </div>
   );

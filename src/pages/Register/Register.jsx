@@ -1,11 +1,87 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Footer from "../../components/shared/Footer";
 import SocialLogin from "../../components/shared/SocialLogin";
 import Navbar from "../../components/shared/Navbar";
+import useAuthContext from "../../hooks/useAuth";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Register = () => {
+  const { createUser, profileUpdate } = useAuthContext();
+  const navigate = useNavigate();
+
   const handleRegistration = e => {
     e.preventDefault();
+    const form = new FormData(e.currentTarget);
+    const name = form.get("name");
+    const photo = form.get("photo");
+    const email = form.get("email");
+    const password = form.get("password");
+    console.log(name, photo, password, email);
+
+    if (password.length < 6) {
+      return toast.error("Password must be 6 characters or long", {
+        style: {
+          color: "white",
+          fontSize: "20px",
+          backgroundColor: "red",
+        },
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: false,
+        progress: undefined,
+        theme: "colored",
+      });
+    } else if (
+      !/^(?=.*[A-Z])(?=.*[!@#$%^&*()_+{}[\]:;<>,.?~\\-]).+$/.test(password)
+    ) {
+      return toast.error(
+        "Password must contain one uppercase,one special character or more",
+        {
+          style: {
+            color: "white",
+            fontSize: "20px",
+            backgroundColor: "red",
+          },
+          position: "top-center",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: false,
+          progress: undefined,
+          theme: "colored",
+        }
+      );
+    }
+
+    createUser(email, password)
+      .then(() => {
+        profileUpdate(name, photo).then(() => {
+          navigate("/");
+        });
+        e.target.reset();
+      })
+      .catch(err => {
+        return toast.error(`${err.message}`, {
+          style: {
+            color: "white",
+            fontSize: "20px",
+            backgroundColor: "red",
+          },
+          position: "top-center",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: false,
+          progress: undefined,
+          theme: "colored",
+        });
+      });
   };
 
   return (
@@ -131,6 +207,7 @@ const Register = () => {
         </div>
       </div>
       <Footer></Footer>
+      <ToastContainer></ToastContainer>
     </div>
   );
 };
