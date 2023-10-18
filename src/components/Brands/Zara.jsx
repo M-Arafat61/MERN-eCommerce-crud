@@ -21,7 +21,7 @@ const Zara = () => {
           the thrill of ever-evolving style with Zara, where you are always at
           the forefront of fashion.
         </p>
-        <Link className='m-auto w-full justify-center flex'>
+        <Link to='/zara-products' className='m-auto w-full justify-center flex'>
           <button className='btn  w-3/4 text-xl font-bold hover:bg-gray-400'>
             Explore Zara
           </button>

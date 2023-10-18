@@ -22,7 +22,10 @@ const Adidas = () => {
           environment. In summary, Adidas is not just a brand; its a lifestyle
           that encapsulates sport, fashion, and a sustainable future.
         </p>
-        <Link className='m-auto w-full justify-center flex'>
+        <Link
+          to='adidas-products'
+          className='m-auto w-full justify-center flex'
+        >
           <button className='btn  w-3/4 text-xl font-bold hover:bg-gray-400'>
             Explore Adidas
           </button>

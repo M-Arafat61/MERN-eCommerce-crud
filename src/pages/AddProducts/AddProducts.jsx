@@ -2,16 +2,51 @@ import Footer from "../../components/shared/Footer";
 import Navbar from "../../components/shared/Navbar";
 
 const AddProducts = () => {
+  const handleAddProducts = e => {
+    e.preventDefault();
+    const form = e.target;
+    const image = form.image.value;
+    const name = form.name.value;
+    const brand = form.brand.value;
+    const type = form.type.value;
+    const price = form.price.value;
+    const description = form.description.value;
+    const rating = form.rating.value;
+
+    const newProducts = {
+      image,
+      name,
+      brand,
+      type,
+      price,
+      description,
+      rating,
+    };
+    console.log(newProducts);
+
+    fetch("http://localhost:5000/addProducts", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(newProducts),
+    })
+      .then(res => res.json())
+      .then(data => {
+        console.log(data);
+      });
+  };
+
   return (
     <div className='max-w-6xl m-auto'>
       <Navbar></Navbar>
       <div className='mt-10 mb-10 flex items-center justify-center space-x-3'>
-        <div className='h-20 bg-gray-500 w-1 '></div>
+        <div className='h-20 bg-cyan-400 w-1 '></div>
         <p className='text-4xl font-bold'>Add Desired Products</p>
       </div>
       <div className='hero mb-20'>
         <div className='card flex-shrink-0 w-3/4 bg-base-200'>
-          <form className='card-body w-3/4 m-auto'>
+          <form onSubmit={handleAddProducts} className='card-body w-3/4 m-auto'>
             {/* input field */}
             <div className='form-control'>
               <label className='label'>
@@ -70,7 +105,7 @@ const AddProducts = () => {
                 <span className='label-text'>Price</span>
               </label>
               <input
-                type='number'
+                type='text'
                 name='price'
                 placeholder='Price'
                 className='input input-bordered'
@@ -97,7 +132,7 @@ const AddProducts = () => {
               </label>
               <input
                 name='rating'
-                type='number'
+                type='text'
                 placeholder='Rating'
                 className='input input-bordered'
                 required
@@ -105,7 +140,11 @@ const AddProducts = () => {
             </div>
 
             <div className='form-control mt-6'>
-              <button className='btn btn-primary'>Add Product</button>
+              <input
+                type='submit'
+                className='btn btn-primary text-lg font-bold'
+                value='Add Product'
+              />
             </div>
           </form>
         </div>

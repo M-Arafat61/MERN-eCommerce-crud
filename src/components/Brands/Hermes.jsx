@@ -23,7 +23,10 @@ const Hermes = () => {
             and unmatched class. Experience the epitome of luxury with Hermès –
             where elegance knows no bounds.
           </p>
-          <Link className='m-auto w-full justify-center flex'>
+          <Link
+            to='/hermes-products'
+            className='m-auto w-full justify-center flex'
+          >
             <button className='btn  w-3/4 text-xl font-bold hover:bg-gray-400'>
               Explore Hermes
             </button>

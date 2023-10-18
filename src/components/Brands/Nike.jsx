@@ -22,7 +22,10 @@ const Nike = () => {
             of elite athlete collaborations, including legends like Michael
             Jordan and Serena Williams.
           </p>
-          <Link className='m-auto w-full justify-center flex'>
+          <Link
+            to='/nike-products'
+            className='m-auto w-full justify-center flex'
+          >
             <button className='btn  w-3/4 text-xl font-bold hover:bg-gray-400'>
               Explore Nike
             </button>

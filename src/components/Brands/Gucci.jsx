@@ -25,7 +25,10 @@ const Gucci = () => {
           creativity, and a commitment to a better future. Embrace the allure of
           Gucci, where every piece tells a story of elegance and innovation.
         </p>
-        <Link className='m-auto w-full justify-center flex'>
+        <Link
+          to='/gucci-products'
+          className='m-auto w-full justify-center flex'
+        >
           <button className='btn  w-3/4 text-xl font-bold hover:bg-gray-400'>
             Explore Gucci
           </button>

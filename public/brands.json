@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "image": "https://i.ibb.co/W03Jszv/peakpx.jpg",
+    "desc": "Nike, an iconic global brand, epitomizes the perfect blend of innovation, style, and athletic excellence. Since its inception in 1964 as Blue Ribbon Sports, Nike has consistently set the benchmark for sports apparel and footwear. The distinctive Nike Swoosh logo is an emblem of excellence recognized worldwide. What sets Nike apart is its unwavering commitment to cutting-edge technology and a stable of elite athlete collaborations, including legends like Michael Jordan and Serena Williams.",
+    "button": "Nike"
+  },
+  {
+    "id": 2,
+    "image": "https://i.ibb.co/tCHr2yZ/peakpx-2.jpg",
+    "desc": "Adidas, a name synonymous with sportswear excellence, has been a trailblazer since its inception in 1949. This iconic brand has redefined athletic fashion, effortlessly merging performance and style. The trefoil logo and the three-striped design are iconic symbols of quality and innovation. Adidas continually pushes boundaries with cutting-edge technologies, producing sneakers and apparel that redefine comfort and performance. Collaborations with sports legends such as Kanye West and Beyoncé have elevated Adidas to a cultural phenomenon. The brand's Originals line perfectly fuses heritage with contemporary trends. Adidas embodies a commitment to sustainability, striving to create a positive impact on the environment.",
+    "button": "Adidas"
+  },
+  {
+    "id": 3,
+    "image": "https://i.ibb.co/ZGRXx8K/peakpx-3.jpg",
+    "desc": "Gucci, a name synonymous with luxury, craftsmanship, and timeless elegance, is a beacon of fashion excellence. Since its inception in Florence in 1921, Gucci has captivated the world with its iconic double-G logo and innovative designs. Gucci's pieces are more than just fashion; they are art. Each creation represents a fusion of tradition and innovation. The brand's commitment to quality materials and meticulous handcrafting ensures that every product exudes sophistication. From the iconic Bamboo Bag to the sleek Ace Sneakers, Gucci has become a status symbol, beloved by celebrities and fashion enthusiasts worldwide. Gucci embraces individuality, encouraging people to express themselves through their unique style. In the realm of sustainability, Gucci is a trailblazer, with a bold vision to create a more responsible and inclusive fashion industry.",
+    "button": "Gucci"
+  },
+  {
+    "id": 4,
+    "image": "https://i.ibb.co/KLXMQCf/5f9a9e4d69331a0011bc5f8b.webp",
+    "desc": "Tiffany & Co., a name synonymous with elegance and enduring love, has enchanted the world since its founding in 1837. The iconic Tiffany Blue Box has become a symbol of luxury and romance. Tiffany's mastery of fine jewelry and silverware is legendary, from their legendary engagement rings to their timeless designs like the Tiffany T collection. Each piece embodies the spirit of exceptional craftsmanship and sophistication. A trip to Tiffany's flagship store on Fifth Avenue in New York is an experience in itself, where dreams are realized and memories are made. Tiffany & Co. is more than jewelry; it's a testament to life's special moments and the enduring power of love.",
+    "button": "Tiffany"
+  },
+  {
+    "id": 5,
+    "image": "https://i.ibb.co/8zpphvG/pexels-burak-ba-g-ze-15673588-1.jpg",
+    "desc": "Zara, a beacon of fast fashion, redefines style and affordability. Founded in Spain in 1974, it's a global fashion powerhouse. Zara's approach is all about making the latest trends accessible to all, with a stunning array of clothing and accessories that cater to diverse tastes. What sets Zara apart is its unparalleled speed in bringing runway trends to the masses. New collections arrive in stores within weeks, ensuring you are always ahead in style. The brand's signature minimalist aesthetic and commitment to sustainability strike a chord with conscious consumers. Zara is the go-to for fashion-forward individuals who crave quality without breaking the bank.",
+    "button": "Zara"
+  },
+  {
+    "id": 6,
+    "image": "https://i.ibb.co/QfBg6VK/peakpx-5.jpg",
+    "desc": "Hermès, the epitome of timeless luxury, has enchanted the world with its exquisite craftsmanship and Parisian elegance since 1837. This illustrious fashion house, known for its iconic orange boxes and impeccable quality, transcends trends and stands as an enduring symbol of opulence. From the iconic Birkin and Kelly bags to the silk scarves and ready-to-wear collections, every Hermès creation is a work of art. The brand's dedication to artisanal expertise, with skilled craftsmen handcrafting each piece, ensures unparalleled quality. Hermès is not just a fashion statement; it's an embodiment of refined taste and sophistication. A status symbol coveted by the fashion elite, it offers a glimpse into the world of timeless style and unmatched class.",
+    "button": "Hermes"
+  }
+]

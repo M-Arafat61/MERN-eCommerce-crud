@@ -24,7 +24,10 @@ const Tiffany = () => {
           power of love. Indulge in the timeless allure of Tiffany and
           experience elegance at its finest.
         </p>
-        <Link className='m-auto w-full justify-center flex'>
+        <Link
+          to='/tiffany-products'
+          className='m-auto w-full justify-center flex'
+        >
           <button className='btn  w-3/4 text-xl font-bold hover:bg-gray-400'>
             Explore Tiffany
           </button>
