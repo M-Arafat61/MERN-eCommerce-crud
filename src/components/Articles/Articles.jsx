@@ -1,7 +1,10 @@
 const Articles = () => {
   return (
     <>
-      <h3 className='text-3xl text-center font-semibold'>LATEST ARTICLES</h3>
+      <div className='flex flex-col items-center justify-center mb-10 space-y-5'>
+        <h3 className='text-4xl text-center font-bold'>Latest Articles</h3>
+        <div className='w-32 bg-gray-500 h-1 '></div>
+      </div>
       <div className='grid grid-cols-4 gap-5'>
         {/* card */}
         <div className='relative flex flex-col text-gray-700 bg-white shadow-md  rounded-xl bg-clip-border mb-10'>

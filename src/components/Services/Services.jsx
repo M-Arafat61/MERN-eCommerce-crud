@@ -8,19 +8,19 @@ const Services = () => {
     <div className=' p-2 md:p-10'>
       <hr />
       <div className='grid grid-cols-2  gap-5 justify-center p-5'>
-        <div className='flex items-center justify-center'>
+        <div className='flex items-center justify-center gap-1'>
           <Tb12Hours className='text-3xl'></Tb12Hours>
           <p className='text-xl font-medium'>24/7 customer support</p>
         </div>
-        <div className='flex items-center justify-center'>
+        <div className='flex items-center justify-center gap-1'>
           <FaShippingFast className='text-3xl'></FaShippingFast>
           <p className='text-xl font-medium'>Free shipping over $50</p>
         </div>
-        <div className='flex items-center justify-center'>
+        <div className='flex items-center justify-center gap-1'>
           <MdAssignmentReturn className='text-3xl'></MdAssignmentReturn>
           <p className='text-xl font-medium'>Free returns up to 30 days</p>
         </div>
-        <div className='flex items-center justify-center'>
+        <div className='flex items-center justify-center gap-1'>
           <RiShoppingBasketLine className='text-3xl'></RiShoppingBasketLine>
           <p className='text-xl font-medium'>Secure & worry free shopping</p>
         </div>

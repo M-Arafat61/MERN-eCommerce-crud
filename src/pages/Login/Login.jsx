@@ -44,7 +44,7 @@ const Login = () => {
   return (
     <div className='max-w-6xl m-auto'>
       <Navbar></Navbar>
-      <div className='hero max-w-3xl h-[70vh] m-auto space-y-5 '>
+      <div className='hero max-w-3xl min-h-screen m-auto space-y-5 '>
         <div className='hero-content flex-col'>
           <div className='text-center'>
             <h1 className='text-5xl font-bold mb-5'> Login your account</h1>
@@ -79,7 +79,7 @@ const Login = () => {
                     Do not have an account?
                     <Link
                       to='/register'
-                      className='ml-1 block font-sans text-sm font-bold leading-normal text-pink-500 antialiased'
+                      className='ml-1 block font-sans text-sm font-bold leading-normal text-cyan-500 antialiased'
                     >
                       Register
                     </Link>
@@ -87,7 +87,7 @@ const Login = () => {
                 </label>
               </div>
               <div className='form-control mt-6'>
-                <button className='btn btn-primary'>Login</button>
+                <button className='btn btn-primary font-bold'>Login</button>
               </div>
               <SocialLogin></SocialLogin>
             </form>

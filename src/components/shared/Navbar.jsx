@@ -1,11 +1,11 @@
 import { Link, NavLink } from "react-router-dom";
 import { GiDreamCatcher } from "react-icons/gi";
 import useAuthContext from "../../hooks/useAuth";
-
+import { BsHeadset } from "react-icons/bs";
 const Navbar = () => {
-  const { user } = useAuthContext();
+  const { user, handleUserLogOut } = useAuthContext();
   return (
-    <div className='navbar bg-base-100'>
+    <div className='navbar bg-base-100 p-5'>
       <div className='navbar-start'>
         <div className='dropdown md:hidden'>
           <label tabIndex={0} className='btn btn-ghost btn-circle'>
@@ -29,52 +29,61 @@ const Navbar = () => {
             className='menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-36'
           >
             <li>
-              <a>Home</a>
+              <Link to='/'>Home</Link>
             </li>
             <li>
-              <a> Add Product</a>
+              <Link to='/add-products'>Add Product</Link>
             </li>
             <li>
-              <a> My Cart</a>
+              <Link>My Cart</Link>
             </li>
           </ul>
         </div>
+        <div className='hidden md:flex flex-col ml-2 text-gray-500'>
+          <p className='text-md '>24/7 customer support</p>
+          <div className='flex items-center'>
+            <BsHeadset className='text-lg' />
+            <p>+88-0927-3353</p>
+          </div>
+        </div>
+      </div>
+      <div className=' navbar-center flex-col '>
         <div className='flex items-center gap-1'>
           <GiDreamCatcher className='text-4xl'></GiDreamCatcher>
           <h3 className='font-semibold'>Elite Emporium</h3>
         </div>
-      </div>
-      <div className='hidden md:flex navbar-center'>
-        <NavLink
-          to='/'
-          className={({ isActive }) =>
-            isActive
-              ? "btn btn-ghost normal-case text-xl underline font-semibold "
-              : "btn-ghost btn"
-          }
-        >
-          Home
-        </NavLink>
-        <NavLink
-          to='/registered-sessions'
-          className={({ isActive }) =>
-            isActive
-              ? "btn btn-ghost normal-case text-xl underline text-white font-semibold "
-              : "btn-ghost btn"
-          }
-        >
-          Add Product
-        </NavLink>
-        <NavLink
-          to='/registered-sessions'
-          className={({ isActive }) =>
-            isActive
-              ? "btn btn-ghost normal-case text-xl underline text-white font-semibold "
-              : "btn-ghost btn"
-          }
-        >
-          My Cart
-        </NavLink>
+        <div className='hidden md:flex'>
+          <NavLink
+            to='/'
+            className={({ isActive }) =>
+              isActive
+                ? "btn btn-ghost normal-case text-xl underline font-semibold "
+                : "btn-ghost btn"
+            }
+          >
+            Home
+          </NavLink>
+          <NavLink
+            to='/add-products'
+            className={({ isActive }) =>
+              isActive
+                ? "btn btn-ghost normal-case text-xl underline font-semibold "
+                : "btn-ghost btn"
+            }
+          >
+            Add Product
+          </NavLink>
+          <NavLink
+            to='/registered-sessions'
+            className={({ isActive }) =>
+              isActive
+                ? "btn btn-ghost normal-case text-xl underline font-semibold "
+                : "btn-ghost btn"
+            }
+          >
+            My Cart
+          </NavLink>
+        </div>
       </div>
 
       {/* Navbar end */}
@@ -90,7 +99,9 @@ const Navbar = () => {
 
               <p className='text-lg'>{user.displayName}</p>
               <Link>
-                <button className='btn btn-ghost'>Logout</button>
+                <button onClick={handleUserLogOut} className='btn btn-ghost'>
+                  Logout
+                </button>
               </Link>
             </div>
           </>

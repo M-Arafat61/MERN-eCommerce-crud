@@ -184,7 +184,7 @@ const Register = () => {
               </div>
               <div className='p-6 pt-0'>
                 <button
-                  className='btn btn-primary'
+                  className='btn btn-primary font-bold'
                   type='submit'
                   data-ripple-light='true'
                 >
@@ -195,7 +195,7 @@ const Register = () => {
                   Already have an account?
                   <Link
                     to='/login'
-                    className='ml-1 block font-sans text-sm font-bold leading-normal text-pink-500 hover:text-black antialiased'
+                    className='ml-1 block font-sans text-sm font-bold leading-normal text-cyan-500 hover:text-black antialiased'
                   >
                     Login
                   </Link>
