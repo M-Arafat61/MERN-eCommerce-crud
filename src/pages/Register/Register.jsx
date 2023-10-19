@@ -91,8 +91,8 @@ const Register = () => {
         <div className='w-3/4 m-auto bg-[#F5F5F5] rounded-lg'>
           <div className='relative flex  flex-col rounded-xl bg-white bg-clip-border text-gray-700'>
             <div className='relative mx-4 mt-6 mb-4 grid h-10 place-items-center overflow-hidden rounded-xl bg-clip-border'>
-              <h3 className='block font-sans text-lg font-semibold leading-snug tracking-normal antialiased'>
-                Register account
+              <h3 className='block font-sans text-lg font-bold leading-snug tracking-normal antialiased'>
+                Create your account
               </h3>
             </div>
             <form onSubmit={handleRegistration}>
@@ -192,12 +192,12 @@ const Register = () => {
                 </button>
 
                 <p className='mt-6 flex font-sans text-sm font-light leading-normal text-inherit antialiased'>
-                  Already have an account?
+                  Have an account?
                   <Link
                     to='/login'
                     className='ml-1 block font-sans text-sm font-bold leading-normal text-cyan-500 hover:text-black antialiased'
                   >
-                    Login
+                    Login now
                   </Link>
                 </p>
                 <SocialLogin></SocialLogin>

@@ -3,24 +3,21 @@ import { Link } from "react-router-dom";
 const Adidas = () => {
   return (
     <div className='card mb-10'>
-      <figure className='w-1/2 m-auto'>
-        <img src='https://i.ibb.co/tCHr2yZ/peakpx-2.jpg' alt='adidas' />
+      <figure className='w-3/4 md:w-1/2 m-auto'>
+        <img
+          className='w-full h-64'
+          src='https://i.ibb.co/tCHr2yZ/peakpx-2.jpg'
+          alt='adidas'
+        />
       </figure>
       <div className='card-body space-y-5'>
         <p className='text-sm font-medium'>
-          Adidas, a name synonymous with sportswear excellence, has been a
-          trailblazer since its inception in 1949. This iconic brand has
-          redefined athletic fashion, effortlessly merging performance and
-          style. The trefoil logo and the three-striped design are iconic
-          symbols of quality and innovation. Adidas continually pushes
-          boundaries with cutting-edge technologies, producing sneakers and
-          apparel that redefine comfort and performance. Collaborations with
-          sports legends such as Kanye West and Beyoncé have elevated Adidas to
-          a cultural phenomenon. The brands Originals line perfectly fuses
-          heritage with contemporary trends. Adidas embodies a commitment to
-          sustainability, striving to create a positive impact on the
-          environment. In summary, Adidas is not just a brand; its a lifestyle
-          that encapsulates sport, fashion, and a sustainable future.
+          Adidas, founded in 1949, is a pioneering force in sportswear. Renowned
+          for its iconic trefoil logo and three-striped design, Adidas merges
+          performance with style. Collaborations with cultural icons, like Kanye
+          West and Beyoncé, have propelled the brand to prominence. Adidas
+          embraces sustainability, crafting a lifestyle blending sport, fashion,
+          and environmental responsibility.
         </p>
         <Link
           to='adidas-products'

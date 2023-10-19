@@ -17,12 +17,19 @@ const Home = () => {
       <Banner></Banner>
       <Services></Services>
 
-      <Nike></Nike>
-      <Adidas></Adidas>
-      <Zara></Zara>
-      <Hermes></Hermes>
-      <Gucci></Gucci>
-      <Tiffany></Tiffany>
+      <div className='mt-10 mb-10 flex flex-col items-center justify-center space-y-3'>
+        <p className='text-2xl md:text-4xl font-bold'>Explore Global Brands </p>
+        <div className='w-48 bg-gray-500 h-1 '></div>
+      </div>
+
+      <div className='grid md:grid-cols-2'>
+        <Nike></Nike>
+        <Adidas></Adidas>
+        <Zara></Zara>
+        <Hermes></Hermes>
+        <Gucci></Gucci>
+        <Tiffany></Tiffany>
+      </div>
 
       <Articles></Articles>
       <Footer></Footer>

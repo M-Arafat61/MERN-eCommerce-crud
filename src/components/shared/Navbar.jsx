@@ -1,11 +1,11 @@
 import { Link, NavLink } from "react-router-dom";
-import { GiDreamCatcher } from "react-icons/gi";
+
 import useAuthContext from "../../hooks/useAuth";
 import { BsHeadset } from "react-icons/bs";
 const Navbar = () => {
   const { user, handleUserLogOut } = useAuthContext();
   return (
-    <div className='navbar bg-base-100 p-5'>
+    <div className='navbar bg-base-100 p-2 md:p-5'>
       <div className='navbar-start'>
         <div className='dropdown md:hidden'>
           <label tabIndex={0} className='btn btn-ghost btn-circle'>
@@ -47,17 +47,17 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className=' navbar-center flex-col '>
-        <div className='flex items-center gap-1'>
-          <GiDreamCatcher className='text-4xl'></GiDreamCatcher>
-          <h3 className='font-semibold'>Elite Emporium</h3>
+      <div className='navbar-center flex-col '>
+        <div className='flex flex-col md:flex-row items-center gap-1'>
+          <img className='w-12' src='https://i.ibb.co/5rYWrW8/cap.png' alt='' />
+          <h3 className='font-bold text-lg'>Elite Emporium</h3>
         </div>
         <div className='hidden md:flex'>
           <NavLink
             to='/'
             className={({ isActive }) =>
               isActive
-                ? "btn btn-ghost normal-case text-xl underline font-semibold "
+                ? "btn btn-ghost normal-case text-xl  font-semibold "
                 : "btn-ghost btn"
             }
           >
@@ -67,7 +67,7 @@ const Navbar = () => {
             to='/add-products'
             className={({ isActive }) =>
               isActive
-                ? "btn btn-ghost normal-case text-xl underline font-semibold "
+                ? "btn btn-ghost normal-case text-xl  font-semibold "
                 : "btn-ghost btn"
             }
           >
@@ -77,7 +77,7 @@ const Navbar = () => {
             to='/cart'
             className={({ isActive }) =>
               isActive
-                ? "btn btn-ghost normal-case text-xl underline font-semibold "
+                ? "btn btn-ghost normal-case text-xl  font-semibold "
                 : "btn-ghost btn"
             }
           >
@@ -87,19 +87,24 @@ const Navbar = () => {
       </div>
 
       {/* Navbar end */}
-      <div className='navbar-end'>
+      <div className='navbar-end pl-5 md:pl-0'>
         {user && user?.protoURL !== null ? (
           <>
-            <div className='flex flex-col items-end'>
+            <div className='flex flex-col flex-wrap-reverse text-end justify-end'>
               <label tabIndex='0' className='btn btn-ghost btn-circle avatar'>
                 <div className='w-12 rounded-full'>
                   <img src={user?.photoURL} />
                 </div>
               </label>
 
-              <p className='text-lg'>{user.displayName}</p>
+              <p className='text-sm md:text-lg font-medium'>
+                {user.displayName}
+              </p>
               <Link>
-                <button onClick={handleUserLogOut} className='btn btn-ghost'>
+                <button
+                  onClick={handleUserLogOut}
+                  className='text-sm   hover:btn-outline font-medium'
+                >
                   Logout
                 </button>
               </Link>

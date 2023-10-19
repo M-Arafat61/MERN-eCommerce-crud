@@ -1,21 +1,25 @@
-import { ToastContainer, toast } from "react-toastify";
+// import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Navbar from "../../components/shared/Navbar";
 import Footer from "../../components/shared/Footer";
 import SocialLogin from "../../components/shared/SocialLogin";
 import useAuthContext from "../../hooks/useAuth";
+import { useState } from "react";
 
 const Login = () => {
   const { userLogin } = useAuthContext();
   const location = useLocation();
   const navigate = useNavigate();
+  const [error, setError] = useState(null);
+  console.log(error);
+
   const handleLogIn = e => {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
     const email = form.get("email");
     const password = form.get("password");
-    console.log(email, password);
+    // console.log(email, password);
 
     userLogin(email, password)
       .then(res => {
@@ -24,21 +28,8 @@ const Login = () => {
         navigate(location?.state || "/");
       })
       .catch(err => {
-        return toast.error(`${err.message}`, {
-          style: {
-            color: "white",
-            fontSize: "20px",
-            backgroundColor: "red",
-          },
-          position: "top-center",
-          autoClose: 3000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: false,
-          progress: undefined,
-          theme: "colored",
-        });
+        console.error(err);
+        setError("The email/password that you've entered is incorrect.");
       });
   };
   return (
@@ -47,7 +38,7 @@ const Login = () => {
       <div className='hero max-w-3xl min-h-screen m-auto space-y-5 '>
         <div className='hero-content flex-col'>
           <div className='text-center'>
-            <h1 className='text-5xl font-bold mb-5'> Login your account</h1>
+            <h1 className='text-2xl font-bold mb-5'> Login your account</h1>
           </div>
           <div className='card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100'>
             <form onSubmit={handleLogIn} className='card-body'>
@@ -86,6 +77,7 @@ const Login = () => {
                   </p>
                 </label>
               </div>
+              {error && <p className='text-red-500'>{error}</p>}
               <div className='form-control mt-6'>
                 <button className='btn btn-primary font-bold'>Login</button>
               </div>
@@ -95,7 +87,6 @@ const Login = () => {
         </div>
       </div>
       <Footer></Footer>
-      <ToastContainer></ToastContainer>
     </div>
   );
 };

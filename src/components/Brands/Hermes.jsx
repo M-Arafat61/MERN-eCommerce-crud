@@ -4,24 +4,19 @@ const Hermes = () => {
   return (
     <>
       <div className=' mb-10'>
-        <figure className='w-1/2 m-auto'>
-          <img src='https://i.ibb.co/QfBg6VK/peakpx-5.jpg' />
+        <figure className='w-3/4 md:w-1/2 m-auto'>
+          <img
+            className='w-full h-64'
+            src='https://i.ibb.co/QfBg6VK/peakpx-5.jpg'
+          />
         </figure>
         <div className='card-body space-y-5'>
           <p className='text-sm font-medium'>
-            Hermès, the epitome of timeless luxury, has enchanted the world with
-            its exquisite craftsmanship and Parisian elegance since 1837. This
-            illustrious fashion house, known for its iconic orange boxes and
-            impeccable quality, transcends trends and stands as an enduring
-            symbol of opulence. From the iconic Birkin and Kelly bags to the
-            silk scarves and ready-to-wear collections, every Hermès creation is
-            a work of art. The brands dedication to artisanal expertise, with
-            skilled craftsmen handcrafting each piece, ensures unparalleled
-            quality. Hermès is not just a fashion statement; its an embodiment
-            of refined taste and sophistication. A status symbol coveted by the
-            fashion elite, it offers a glimpse into the world of timeless style
-            and unmatched class. Experience the epitome of luxury with Hermès –
-            where elegance knows no bounds.
+            Hermès, synonymous with timeless luxury since 1837, captivates with
+            Parisian elegance and impeccable craftsmanship. From iconic bags to
+            silk scarves, each creation is a work of art, handcrafted for
+            unparalleled quality. It embodies refined taste and sophistication,
+            offering the epitome of timeless style and unmatched class.
           </p>
           <Link
             to='/hermes-products'

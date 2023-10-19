@@ -19,13 +19,13 @@ const SocialLogin = () => {
 
   return (
     <div>
-      <div className='flex items-center mt-5'>
-        <AiFillGoogleCircle className='text-5xl'></AiFillGoogleCircle>
+      <div className=' mt-5'>
         <Link state={location.pathname}>
           <button
             onClick={handleSocialLogin}
-            className='btn btn-outline btn-primary'
+            className='btn btn-outline font-bold text-xl btn-primary'
           >
+            <AiFillGoogleCircle className='text-4xl mr-2'></AiFillGoogleCircle>
             Google
           </button>
         </Link>
