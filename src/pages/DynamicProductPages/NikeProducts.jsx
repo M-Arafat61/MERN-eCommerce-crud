@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import Navbar from "../../components/shared/Navbar";
 import Footer from "../../components/shared/Footer";
 import { Carousel } from "react-responsive-carousel";
@@ -6,7 +6,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const NikeProducts = () => {
   const nikeProducts = useLoaderData();
-  console.log(nikeProducts);
+  // console.log(nikeProducts);
   return (
     <div className='max-w-6xl m-auto space-y-10'>
       <Navbar></Navbar>
@@ -63,9 +63,12 @@ const NikeProducts = () => {
                 </p>
                 <p className='text-lg font-medium'>Price: ${product.price}</p>
                 <div className='flex justify-between items-center gap-2 '>
-                  <button className='btn text-lg font-bold w-1/2'>
+                  <Link
+                    to={`/products/${product._id}`}
+                    className='btn text-lg font-bold w-1/2'
+                  >
                     Details
-                  </button>
+                  </Link>
                   <button className='btn text-lg font-bold w-1/2'>
                     Update
                   </button>

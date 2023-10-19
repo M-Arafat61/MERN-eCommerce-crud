@@ -1,7 +1,7 @@
 import { Carousel } from "react-responsive-carousel";
 import Navbar from "../../components/shared/Navbar";
 import Footer from "../../components/shared/Footer";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 const TiffanyProducts = () => {
   const tiffanyProducts = useLoaderData();
@@ -47,7 +47,7 @@ const TiffanyProducts = () => {
               <div className='card  w-3/4 m-auto bg-base-100 shadow-md mb-10'>
                 <figure>
                   <img
-                    className='h-[500px] w-full object-cover object-cover'
+                    className='h-[500px] w-full object-cover '
                     src={product.image}
                     alt='Shoes'
                   />
@@ -63,9 +63,12 @@ const TiffanyProducts = () => {
                   </p>
                   <p className='text-lg font-medium'>Price: ${product.price}</p>
                   <div className='flex justify-between items-center gap-2 '>
-                    <button className='btn text-lg font-bold w-1/2'>
+                    <Link
+                      to={`/products/${product._id}`}
+                      className='btn text-lg font-bold w-1/2'
+                    >
                       Details
-                    </button>
+                    </Link>
                     <button className='btn text-lg font-bold w-1/2'>
                       Update
                     </button>

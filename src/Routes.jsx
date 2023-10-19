@@ -13,6 +13,8 @@ import GucciProducts from "./pages/DynamicProductPages/GucciProducts";
 import HermesProducts from "./pages/DynamicProductPages/HermesProducts";
 import TiffanyProducts from "./pages/DynamicProductPages/TiffanyProducts";
 import ZaraProducts from "./pages/DynamicProductPages/ZaraProducts";
+import ProductDetails from "./pages/ProductDetails/ProductDetails";
+import PrivateProductDetails from "./PrivateRoutes/PrivateProductDetails";
 
 const router = createBrowserRouter([
   {
@@ -75,6 +77,16 @@ const router = createBrowserRouter([
         path: "/zara-products",
         element: <ZaraProducts></ZaraProducts>,
         loader: () => fetch("http://localhost:5000/zara-products"),
+      },
+      {
+        path: "/products/:id",
+        element: (
+          <PrivateProductDetails>
+            <ProductDetails></ProductDetails>
+          </PrivateProductDetails>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/products/${params.id}`),
       },
     ],
   },

@@ -43,13 +43,7 @@ const AuthProvider = ({ children }) => {
 
   // google login
   const googleLogin = () => {
-    return signInWithPopup(auth, googleProvider)
-      .then(res => {
-        console.log(res.user);
-      })
-      .catch(err => {
-        console.log(err.message);
-      });
+    return signInWithPopup(auth, googleProvider);
   };
   const info = {
     user,
