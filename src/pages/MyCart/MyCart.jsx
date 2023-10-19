@@ -14,9 +14,9 @@ const MyCart = () => {
 
       <div className='flex gap-2 justify-center items-center'>
         <div className='w-1 bg-cyan-500 h-20 '></div>
-        <h2 className='text-3xl font-bold'>Added items: {cart.length}</h2>
+        <h2 className='text-3xl font-bold'>Total cart items: {cart.length}</h2>
       </div>
-      <div className='grid grid-cols-3 gap-5'>
+      <div className='grid md:grid-cols-3 gap-5'>
         {cart.map(item => (
           <CartCard
             key={item._id}

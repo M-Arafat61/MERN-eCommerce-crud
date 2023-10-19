@@ -33,21 +33,26 @@ const CartCard = ({ item, cart, setCart }) => {
   };
 
   return (
-    <div className='card card-compact  bg-base-100 shadow-md'>
-      <figure>
-        <img
-          className='w-[300px] h-[400px] object-cover'
-          src={image}
-          alt='cart image'
-        />
-      </figure>
-      <div className='card-body'>
-        <h2 className='card-title'>{name}</h2>
-        <p>${price}</p>
-        <div className='card-actions '>
-          <button onClick={() => handleRemove(_id)} className='btn btn-primary'>
-            Remove Item
-          </button>
+    <div className='p-5'>
+      <div className='card card-compact  bg-base-100 shadow-md '>
+        <figure>
+          <img
+            className='w-[300px] h-[400px] object-cover'
+            src={image}
+            alt='cart image'
+          />
+        </figure>
+        <div className='card-body'>
+          <h2 className='card-title'>{name}</h2>
+          <p>${price}</p>
+          <div className='card-actions '>
+            <button
+              onClick={() => handleRemove(_id)}
+              className='btn btn-primary'
+            >
+              Remove Item
+            </button>
+          </div>
         </div>
       </div>
     </div>
