@@ -35,13 +35,13 @@ const Login = () => {
   return (
     <div className='max-w-6xl m-auto'>
       <Navbar></Navbar>
-      <div className='hero max-w-3xl min-h-screen m-auto space-y-5 '>
+      <div className='hero max-w-3xl min-h-screen m-auto space-y-10 '>
         <div className='hero-content flex-col'>
           <div className='text-center'>
             <h1 className='text-2xl font-bold mb-5'> Login your account</h1>
           </div>
           <div className='card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100'>
-            <form onSubmit={handleLogIn} className='card-body'>
+            <form onSubmit={handleLogIn} className='card-body '>
               <div className='form-control'>
                 <label className='label'>
                   <span className='label-text'>Email</span>

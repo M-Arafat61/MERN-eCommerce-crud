@@ -41,12 +41,15 @@ const AddProducts = () => {
     <div className='max-w-6xl m-auto'>
       <Navbar></Navbar>
       <div className='mt-10 mb-10 flex items-center justify-center space-x-3'>
-        <div className='h-20 bg-cyan-400 w-1 '></div>
+        <div className='h-20 bg-gray-500 w-1 '></div>
         <p className='text-4xl font-bold'>Add Desired Products</p>
       </div>
-      <div className='hero mb-20'>
-        <div className='card flex-shrink-0 w-3/4 bg-base-200'>
-          <form onSubmit={handleAddProducts} className='card-body w-3/4 m-auto'>
+      <div className='hero mb-20 p-5'>
+        <div className='card flex-shrink-0 w-full md:w-3/4 bg-base-200'>
+          <form
+            onSubmit={handleAddProducts}
+            className='card-body w-full md:w-3/4 m-auto'
+          >
             {/* input field */}
             <div className='form-control'>
               <label className='label'>

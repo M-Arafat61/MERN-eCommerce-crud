@@ -5,6 +5,9 @@ export default {
     themes: ["light", "dark", "cupcake"],
   },
   theme: {
+    fontFamily: {
+      roboto: ["Roboto", "sans-serif"],
+    },
     extend: {},
   },
   plugins: [require("daisyui")],

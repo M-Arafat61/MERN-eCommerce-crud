@@ -85,7 +85,7 @@ const Register = () => {
   };
 
   return (
-    <div className='max-w-6xl m-auto '>
+    <div className='max-w-6xl m-auto space-y-10 '>
       <Navbar></Navbar>
       <div className='max-w-3xl min-h-screen m-auto flex flex-col '>
         <div className='w-3/4 m-auto bg-[#F5F5F5] rounded-lg'>

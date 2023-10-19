@@ -3,7 +3,7 @@ const Footer = () => {
   return (
     <footer className='footer p-10 bg-base-200 text-base-content'>
       <aside>
-        <GiDreamCatcher className='text-7xl'></GiDreamCatcher>
+        <img className='w-12' src='https://i.ibb.co/5rYWrW8/cap.png' alt='' />
         <p>
           <span className='text-lg font-semibold'>Elite Emporium</span>
           <br />
