@@ -33,14 +33,14 @@ const Login = () => {
       });
   };
   return (
-    <div className='max-w-6xl m-auto'>
+    <div className='max-w-6xl m-auto space-y-10 '>
       <Navbar></Navbar>
-      <div className='hero max-w-3xl min-h-screen m-auto space-y-10 '>
-        <div className='hero-content flex-col'>
+      <div className='hero m-auto '>
+        <div className='hero-content flex-col w-3/4 bg-white'>
           <div className='text-center'>
             <h1 className='text-2xl font-bold mb-5'> Login your account</h1>
           </div>
-          <div className='card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100'>
+          <div className='card flex-shrink-0 w-full md:w-3/4 shadow-xl bg-base-100 mb-5'>
             <form onSubmit={handleLogIn} className='card-body '>
               <div className='form-control'>
                 <label className='label'>

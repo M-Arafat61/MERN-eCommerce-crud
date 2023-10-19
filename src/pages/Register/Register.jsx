@@ -87,7 +87,7 @@ const Register = () => {
   return (
     <div className='max-w-6xl m-auto space-y-10 '>
       <Navbar></Navbar>
-      <div className='max-w-3xl min-h-screen m-auto flex flex-col '>
+      <div className='max-w-3xl m-auto flex flex-col '>
         <div className='w-3/4 m-auto bg-[#F5F5F5] rounded-lg'>
           <div className='relative flex  flex-col rounded-xl bg-white bg-clip-border text-gray-700'>
             <div className='relative mx-4 mt-6 mb-4 grid h-10 place-items-center overflow-hidden rounded-xl bg-clip-border'>
