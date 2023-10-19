@@ -35,7 +35,7 @@ const Navbar = () => {
               <Link to='/add-products'>Add Product</Link>
             </li>
             <li>
-              <Link>My Cart</Link>
+              <Link to='/cart'>My Cart</Link>
             </li>
           </ul>
         </div>
@@ -74,7 +74,7 @@ const Navbar = () => {
             Add Product
           </NavLink>
           <NavLink
-            to='/registered-sessions'
+            to='/cart'
             className={({ isActive }) =>
               isActive
                 ? "btn btn-ghost normal-case text-xl underline font-semibold "

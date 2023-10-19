@@ -15,6 +15,8 @@ import TiffanyProducts from "./pages/DynamicProductPages/TiffanyProducts";
 import ZaraProducts from "./pages/DynamicProductPages/ZaraProducts";
 import ProductDetails from "./pages/ProductDetails/ProductDetails";
 import PrivateProductDetails from "./PrivateRoutes/PrivateProductDetails";
+import MyCart from "./pages/MyCart/MyCart";
+import PrivateCart from "./PrivateRoutes/PrivateCart";
 
 const router = createBrowserRouter([
   {
@@ -87,6 +89,15 @@ const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(`http://localhost:5000/products/${params.id}`),
+      },
+      {
+        path: "/cart",
+        element: (
+          <PrivateCart>
+            <MyCart></MyCart>
+          </PrivateCart>
+        ),
+        loader: () => fetch("http://localhost:5000/cart"),
       },
     ],
   },
