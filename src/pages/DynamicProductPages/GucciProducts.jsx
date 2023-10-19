@@ -68,9 +68,12 @@ const GucciProducts = () => {
                     >
                       Details
                     </Link>
-                    <button className='btn text-lg font-bold w-1/2'>
+                    <Link
+                      to={`/update-product/${product._id}`}
+                      className='btn text-lg font-bold w-1/2'
+                    >
                       Update
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>

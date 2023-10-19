@@ -32,7 +32,6 @@ const CartCard = ({ item, cart, setCart }) => {
     });
   };
 
-  //   cart/:id
   return (
     <div className='card card-compact  bg-base-100 shadow-md'>
       <figure>

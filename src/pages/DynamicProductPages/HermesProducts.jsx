@@ -62,12 +62,18 @@ const HermesProducts = () => {
                   </p>
                   <p className='text-lg font-medium'>Price: ${product.price}</p>
                   <div className='flex justify-between items-center gap-2 '>
-                    <button className='btn text-lg font-bold w-1/2'>
+                    <Link
+                      to={`/products/${product._id}`}
+                      className='btn text-lg font-bold w-1/2'
+                    >
                       Details
-                    </button>
-                    <button className='btn text-lg font-bold w-1/2'>
+                    </Link>
+                    <Link
+                      to={`/update-product/${product._id}`}
+                      className='btn text-lg font-bold w-1/2'
+                    >
                       Update
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>

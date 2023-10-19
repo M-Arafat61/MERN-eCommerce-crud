@@ -61,16 +61,19 @@ const ZaraProducts = () => {
                     Rating: {product.rating}/5
                   </p>
                   <p className='text-lg font-medium'>Price: ${product.price}</p>
-                  <div className='flex justify-between items-center gap-2 '>
+                  <div className='flex  items-center justify-center gap-2 w-full'>
                     <Link
                       to={`/products/${product._id}`}
                       className='btn text-lg font-bold w-1/2'
                     >
                       Details
                     </Link>
-                    <button className='btn text-lg font-bold w-1/2'>
+                    <Link
+                      to={`/update-product/${product._id}`}
+                      className='btn text-lg font-bold w-1/2'
+                    >
                       Update
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>

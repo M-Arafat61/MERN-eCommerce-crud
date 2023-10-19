@@ -10,7 +10,6 @@ const ProductDetails = () => {
   const { description, image, name, price, type } = product;
 
   const cartInfo = { name, type, description, image, price };
-  // console.log("cartDetails", cartDetails);
 
   const handleAddCart = () => {
     console.log("object");
