@@ -13,13 +13,16 @@ const ProductDetails = () => {
 
   const handleAddCart = () => {
     console.log("object");
-    fetch("http://localhost:5000/userCart", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(cartInfo),
-    })
+    fetch(
+      "https://elite-ensemble-emporium-server-o7xy7v2wj.vercel.app/userCart",
+      {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(cartInfo),
+      }
+    )
       .then(res => res.json())
       .then(data => {
         console.log(data);

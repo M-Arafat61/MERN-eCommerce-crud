@@ -22,13 +22,16 @@ const UpdateProducts = () => {
 
     const updatedProduct = { image, name, brand, type, price, rating };
 
-    fetch(`http://localhost:5000/update-product/${_id}`, {
-      method: "PUT",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(updatedProduct),
-    })
+    fetch(
+      `https://elite-ensemble-emporium-server-o7xy7v2wj.vercel.app/update-product/${_id}`,
+      {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(updatedProduct),
+      }
+    )
       .then(res => res.json())
       .then(data => {
         console.log(data);

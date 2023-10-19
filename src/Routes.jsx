@@ -50,37 +50,55 @@ const router = createBrowserRouter([
       // {
       //   path: "/products",
       //   element: <Products></Products>,
-      //   loader: () => fetch("http://localhost:5000/products"),
+      //   loader: () => fetch("https://elite-ensemble-emporium-server-o7xy7v2wj.vercel.app/products"),
       // },
       {
         path: "/nike-products",
         element: <NikeProducts></NikeProducts>,
-        loader: () => fetch("http://localhost:5000/nike-products"),
+        loader: () =>
+          fetch(
+            "https://elite-ensemble-emporium-server-o7xy7v2wj.vercel.app/nike-products"
+          ),
       },
       {
         path: "/adidas-products",
         element: <AdidasProducts></AdidasProducts>,
-        loader: () => fetch("http://localhost:5000/adidas-products"),
+        loader: () =>
+          fetch(
+            "https://elite-ensemble-emporium-server-o7xy7v2wj.vercel.app/adidas-products"
+          ),
       },
       {
         path: "/gucci-products",
         element: <GucciProducts></GucciProducts>,
-        loader: () => fetch("http://localhost:5000/gucci-products"),
+        loader: () =>
+          fetch(
+            "https://elite-ensemble-emporium-server-o7xy7v2wj.vercel.app/gucci-products"
+          ),
       },
       {
         path: "/hermes-products",
         element: <HermesProducts></HermesProducts>,
-        loader: () => fetch("http://localhost:5000/hermes-products"),
+        loader: () =>
+          fetch(
+            "https://elite-ensemble-emporium-server-o7xy7v2wj.vercel.app/hermes-products"
+          ),
       },
       {
         path: "/tiffany-products",
         element: <TiffanyProducts></TiffanyProducts>,
-        loader: () => fetch("http://localhost:5000/tiffany-products"),
+        loader: () =>
+          fetch(
+            "https://elite-ensemble-emporium-server-o7xy7v2wj.vercel.app/tiffany-products"
+          ),
       },
       {
         path: "/zara-products",
         element: <ZaraProducts></ZaraProducts>,
-        loader: () => fetch("http://localhost:5000/zara-products"),
+        loader: () =>
+          fetch(
+            "https://elite-ensemble-emporium-server-o7xy7v2wj.vercel.app/zara-products"
+          ),
       },
       {
         path: "/products/:id",
@@ -90,7 +108,9 @@ const router = createBrowserRouter([
           </PrivateProductDetails>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/products/${params.id}`),
+          fetch(
+            `https://elite-ensemble-emporium-server-o7xy7v2wj.vercel.app/products/${params.id}`
+          ),
       },
       {
         path: "/cart",
@@ -99,7 +119,10 @@ const router = createBrowserRouter([
             <MyCart></MyCart>
           </PrivateCart>
         ),
-        loader: () => fetch("http://localhost:5000/cart"),
+        loader: () =>
+          fetch(
+            "https://elite-ensemble-emporium-server-o7xy7v2wj.vercel.app/cart"
+          ),
       },
       {
         path: "/update-product/:id",
@@ -109,7 +132,9 @@ const router = createBrowserRouter([
           </PrivateUpdateProduct>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/products/${params.id}`),
+          fetch(
+            `https://elite-ensemble-emporium-server-o7xy7v2wj.vercel.app/products/${params.id}`
+          ),
       },
     ],
   },

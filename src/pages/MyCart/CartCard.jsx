@@ -16,9 +16,12 @@ const CartCard = ({ item, cart, setCart }) => {
       confirmButtonText: "Yes, remove it!",
     }).then(result => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/cart/${_id}`, {
-          method: "DELETE",
-        })
+        fetch(
+          `https://elite-ensemble-emporium-server-o7xy7v2wj.vercel.app/cart/${_id}`,
+          {
+            method: "DELETE",
+          }
+        )
           .then(res => res.json())
           .then(data => {
             console.log(data);
