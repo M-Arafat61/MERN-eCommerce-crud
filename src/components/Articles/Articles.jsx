@@ -10,6 +10,7 @@ const Articles = () => {
         <div className='relative flex flex-col text-gray-700 bg-white shadow-md  rounded-xl bg-clip-border mb-10'>
           <div className='relative mx-4 mt-4 overflow-hidden text-gray-700 bg-base-100 shadow-lg h-80 rounded-xl bg-clip-border'>
             <img
+              className='m-auto object-cover'
               src='https://i.ibb.co/wRXSt6F/pexels-vova-kras-2726161.jpg'
               alt='profile-picture'
             />
@@ -27,6 +28,7 @@ const Articles = () => {
         <div className='relative flex flex-col text-gray-700 bg-white shadow-md  rounded-xl bg-clip-border mb-10'>
           <div className='relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white shadow-lg h-80 rounded-xl bg-clip-border'>
             <img
+              className='m-auto object-cover'
               src='https://i.ibb.co/RvFLXry/pexels-jack-winbow-1457983.jpg'
               alt='profile-picture'
             />
@@ -44,6 +46,7 @@ const Articles = () => {
         <div className='relative flex flex-col text-gray-700 bg-white shadow-md  rounded-xl bg-clip-border mb-10'>
           <div className='relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white shadow-lg h-80 rounded-xl bg-clip-border'>
             <img
+              className='m-auto object-cover'
               src='https://i.ibb.co/ZMbD2rN/pexels-athena-2043590.jpg'
               alt='profile-picture'
             />
@@ -61,6 +64,7 @@ const Articles = () => {
         <div className='relative flex flex-col text-gray-700 bg-white shadow-md  rounded-xl bg-clip-border mb-10'>
           <div className='relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white shadow-lg h-80 rounded-xl bg-clip-border'>
             <img
+              className='m-auto object-cover'
               src='https://i.ibb.co/JQ8rL9f/pexels-yuliya-kosolapova-3270230.jpg'
               alt='profile-picture'
             />

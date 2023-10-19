@@ -20,34 +20,34 @@ const TiffanyProducts = () => {
         >
           <div>
             <img
-              className='h-[650px] object-cover'
+              className='h-[400px] md:h-[650px] object-cover'
               src='https://i.ibb.co/HCX6KqP/Peretti-Bone-Bean-On-Fig-Mktg-Tile-6.webp'
               alt='Slide 1'
             />
           </div>
           <div>
             <img
-              className='h-[650px] object-cover'
+              className='h-[400px] md:h-[650px] object-cover'
               src='https://i.ibb.co/X8F9JF3/2023-LOCK2.webp'
               alt='Slide 2'
             />
           </div>
           <div>
             <img
-              className='h-[650px] object-cover'
+              className='h-[400px] md:h-[650px] object-cover'
               src='https://i.ibb.co/k4jsdDw/Peretti-Bone-Bean-On-Fig-Mktg-Tile-4.webp'
               alt='Slide 3'
             />
           </div>
         </Carousel>
 
-        <div>
+        <div className='grid md:grid-cols-2 gap-5 '>
           {tiffanyProducts.map(product => (
             <div key={product._id}>
               <div className='card  w-3/4 m-auto bg-base-100 shadow-md mb-10'>
                 <figure>
                   <img
-                    className='h-[500px] w-full object-cover '
+                    className='h-[300px] md:h-[500px] w-full object-cover '
                     src={product.image}
                     alt='Shoes'
                   />

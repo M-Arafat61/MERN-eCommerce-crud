@@ -20,34 +20,34 @@ const NikeProducts = () => {
       >
         <div>
           <img
-            className='h-[650px] object-cover'
+            className='h-[400px] md:h-[650px] object-cover'
             src='https://i.ibb.co/rdwk81d/pexels-isabella-mendes-341003.jpg'
             alt='Slide 1'
           />
         </div>
         <div>
           <img
-            className='h-[650px] object-cover'
+            className='h-[400px] md:h-[650px] object-cover'
             src='https://i.ibb.co/jLFR92G/pexels-craig-adderley-1543904.jpg'
             alt='Slide 2'
           />
         </div>
         <div>
           <img
-            className='h-[650px] object-cover'
+            className='h-[400px] md:h-[650px] object-cover'
             src='https://i.ibb.co/BBk2kmk/pexels-rafa-de-345415.jpg'
             alt='Slide 3'
           />
         </div>
       </Carousel>
 
-      <div>
+      <div className='grid md:grid-cols-2 gap-5 '>
         {nikeProducts.map(product => (
           <div key={product._id}>
             <div className='card  w-3/4 m-auto bg-base-100 shadow-md mb-10'>
               <figure>
                 <img
-                  className='h-[500px] w-full object-cover'
+                  className='h-[300px] md:h-[500px] w-full object-cover'
                   src={product.image}
                   alt='Shoes'
                 />

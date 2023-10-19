@@ -6,7 +6,7 @@ import { Link, useLoaderData } from "react-router-dom";
 const GucciProducts = () => {
   const gucciProducts = useLoaderData();
   return (
-    <div>
+    <div className='grid md:grid-cols-2 gap-5 '>
       <div className='max-w-6xl m-auto space-y-10'>
         <Navbar></Navbar>
 
@@ -19,34 +19,34 @@ const GucciProducts = () => {
         >
           <div>
             <img
-              className='h-[650px] object-cover'
+              className='h-[400px] md:h-[650px] object-cover'
               src='https://i.ibb.co/K2jg3dQ/pexels-melike-benli-13789664.jpg'
               alt='Slide 1'
             />
           </div>
           <div>
             <img
-              className='h-[650px] object-cover'
+              className='h-[400px] md:h-[650px] object-cover'
               src='https://i.ibb.co/Ybr64Qr/pexels-evg-kowalievska-1187777.jpg'
               alt='Slide 2'
             />
           </div>
           <div>
             <img
-              className='h-[650px] object-cover'
+              className='h-[400px] md:h-[650px] object-cover'
               src='https://i.ibb.co/YjvtpcS/pexels-anna-keibalo-18018971.jpg'
               alt='Slide 3'
             />
           </div>
         </Carousel>
 
-        <div>
+        <div className='grid md:grid-cols-2 gap-5 '>
           {gucciProducts.map(product => (
             <div key={product._id}>
               <div className='card  w-3/4 m-auto bg-base-100 shadow-md mb-10'>
                 <figure>
                   <img
-                    className='h-[500px] w-full object-cover'
+                    className='h-[300px] md:h-[500px] w-full object-cover'
                     src={product.image}
                     alt='Shoes'
                   />

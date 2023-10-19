@@ -19,34 +19,34 @@ const ZaraProducts = () => {
         >
           <div>
             <img
-              className='h-[650px] object-cover'
+              className='h-[400px] md:h-[650px] object-cover'
               src='https://i.ibb.co/12qLqd5/pexels-hanuman-photo-studio-17668397.jpg'
               alt='Slide 1'
             />
           </div>
           <div>
             <img
-              className='h-[650px] object-cover'
+              className='h-[400px] md:h-[650px] object-cover'
               src='https://i.ibb.co/wRnmJxH/pexels-elif-nur-16034366.jpg'
               alt='Slide 2'
             />
           </div>
           <div>
             <img
-              className='h-[650px] object-cover'
+              className='h-[400px] md:h-[650px] object-cover'
               src='https://i.ibb.co/jfdsvRF/pexels-mind-of-amaka-6639326.jpg'
               alt='Slide 3'
             />
           </div>
         </Carousel>
 
-        <div>
+        <div className='grid md:grid-cols-2 gap-5 '>
           {zaraProducts.map(product => (
             <div key={product._id}>
               <div className='card  w-3/4 m-auto bg-base-100 shadow-md mb-10'>
                 <figure>
                   <img
-                    className='h-[500px] w-full object-cover'
+                    className='h-[300px] md:h-[500px] w-full object-cover'
                     src={product.image}
                     alt='Shoes'
                   />
