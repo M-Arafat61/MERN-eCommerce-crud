@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className='footer p-10 text-base-content'>
+    <footer className='footer p-10 '>
       <aside>
         <img className='w-12' src='https://i.ibb.co/5rYWrW8/cap.png' alt='' />
         <p>
@@ -33,7 +33,7 @@ const Footer = () => {
         <header className='footer-title'>Newsletter</header>
         <fieldset className='form-control w-80'>
           <label className='label'>
-            <span className='label-text'>Enter your email address</span>
+            <span className=''>Enter your email address</span>
           </label>
           <div className='relative'>
             <input

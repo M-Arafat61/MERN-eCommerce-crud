@@ -17,7 +17,7 @@ const CartCard = ({ item, cart, setCart }) => {
     }).then(result => {
       if (result.isConfirmed) {
         fetch(
-          `https://elite-ensemble-emporium-server-4spkkkw22.vercel.app/cart/${_id}`,
+          `https://elite-ensemble-emporium-server-lq165v8ny.vercel.app/cart/${_id}`,
           {
             method: "DELETE",
           }

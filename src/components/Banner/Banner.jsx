@@ -2,8 +2,8 @@ import { TbSignature } from "react-icons/tb";
 
 const Banner = () => {
   return (
-    <div className='flex flex-col-reverse md:flex-row items-center justify-center mt-2 mb-10 p-5'>
-      <div className='flex flex-col items-center text-center w-full md:w-4/12 text-base italic'>
+    <div className='flex flex-col-reverse md:flex-row items-center justify-center mb-10 p-5 dark:bg-dark dark:text-light'>
+      <div className='flex flex-col items-center text-center w-full md:w-4/12 italic'>
         <p>Fashion that Speaks Louder than Words</p>
         <p> Discover Versatility</p>
         <p>Elevate Your Everyday with Our Fashion Essentials</p>

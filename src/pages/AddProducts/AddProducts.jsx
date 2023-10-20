@@ -25,7 +25,7 @@ const AddProducts = () => {
     console.log(newProducts);
 
     fetch(
-      "https://elite-ensemble-emporium-server-4spkkkw22.vercel.app/addProducts",
+      "https://elite-ensemble-emporium-server-lq165v8ny.vercel.app/addProducts",
       {
         method: "POST",
         headers: {

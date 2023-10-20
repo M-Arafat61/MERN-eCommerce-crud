@@ -12,7 +12,7 @@ import Tiffany from "../../components/Brands/Tiffany";
 
 const Home = () => {
   return (
-    <div className='max-w-6xl m-auto'>
+    <div className='max-w-6xl m-auto dark:bg-dark dark:text-light'>
       <Navbar />
       <Banner></Banner>
       <Services></Services>

@@ -2,10 +2,13 @@ import { Link, NavLink } from "react-router-dom";
 
 import useAuthContext from "../../hooks/useAuth";
 import { BsHeadset } from "react-icons/bs";
+import Switcher from "../Theme/Switcher";
+import sLogo from "/shop.svg";
+
 const Navbar = () => {
   const { user, handleUserLogOut } = useAuthContext();
   return (
-    <div className='navbar bg-base-100 p-2 md:p-5'>
+    <div className='navbar dark:bg-dark dark:text-light p-2 md:p-5'>
       <div className='navbar-start'>
         <div className='dropdown md:hidden'>
           <label tabIndex={0} className='btn btn-ghost btn-circle'>
@@ -39,7 +42,8 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <div className='hidden md:flex flex-col ml-2 text-gray-500'>
+
+        <div className='hidden md:flex flex-col ml-2'>
           <p className='text-md '>24/7 customer support</p>
           <div className='flex items-center'>
             <BsHeadset className='text-lg' />
@@ -47,9 +51,10 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+
       <div className='navbar-center flex-col '>
-        <div className='flex flex-col md:flex-row items-center gap-1'>
-          <img className='w-12' src='https://i.ibb.co/5rYWrW8/cap.png' alt='' />
+        <div className='flex flex-col md:flex-row items-center gap-2'>
+          <img className='w-10' src={sLogo} alt='' />
           <h3 className='font-bold text-lg'>Elite Emporium</h3>
         </div>
         <div className='hidden md:flex'>
@@ -88,34 +93,39 @@ const Navbar = () => {
 
       {/* Navbar end */}
       <div className='navbar-end pl-5 md:pl-0'>
-        {user && user?.protoURL !== null ? (
-          <>
-            <div className='flex flex-col flex-wrap-reverse text-end justify-end'>
-              <label tabIndex='0' className='btn btn-ghost btn-circle avatar'>
-                <div className='w-12 rounded-full'>
-                  <img src={user?.photoURL} />
-                </div>
-              </label>
+        <div className='flex flex-col items-end space-y-2'>
+          {user && user?.protoURL !== null ? (
+            <>
+              <div className='flex flex-col flex-wrap-reverse text-end justify-end'>
+                <label tabIndex='0' className='btn btn-ghost btn-circle avatar'>
+                  <div className='w-12 rounded-full'>
+                    <img src={user?.photoURL} />
+                  </div>
+                </label>
 
-              <p className='text-sm md:text-lg font-medium'>
-                {user.displayName}
-              </p>
-              <Link>
-                <button
-                  onClick={handleUserLogOut}
-                  className='text-sm   hover:btn-outline btn btn-ghost font-medium'
-                >
-                  Logout
-                </button>
-              </Link>
-            </div>
-          </>
-        ) : (
-          // <img src={Avatar} />
-          <Link to='/login'>
-            <button className='btn btn-outline '>Login</button>
-          </Link>
-        )}
+                <p className='text-sm md:text-base font-medium'>
+                  {user.displayName}
+                </p>
+                <Link>
+                  <button
+                    onClick={handleUserLogOut}
+                    className='text-sm   hover:btn-outline btn btn-ghost font-medium'
+                  >
+                    Logout
+                  </button>
+                </Link>
+              </div>
+            </>
+          ) : (
+            // <img src={Avatar} />
+            <Link to='/login'>
+              <button className='btn  '>Login</button>
+            </Link>
+          )}
+          <div className=''>
+            <Switcher></Switcher>
+          </div>
+        </div>
       </div>
     </div>
   );

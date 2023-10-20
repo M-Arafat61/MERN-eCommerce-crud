@@ -14,7 +14,7 @@ const ProductDetails = () => {
   const handleAddCart = () => {
     console.log("object");
     fetch(
-      "https://elite-ensemble-emporium-server-4spkkkw22.vercel.app/userCart",
+      "https://elite-ensemble-emporium-server-lq165v8ny.vercel.app/userCart",
       {
         method: "POST",
         headers: {
