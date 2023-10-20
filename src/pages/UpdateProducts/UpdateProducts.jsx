@@ -23,7 +23,7 @@ const UpdateProducts = () => {
     const updatedProduct = { image, name, brand, type, price, rating };
 
     fetch(
-      `https://elite-ensemble-emporium-server-o7xy7v2wj.vercel.app/update-product/${_id}`,
+      `https://elite-ensemble-emporium-server.vercel.app/update-product/${_id}`,
       {
         method: "PUT",
         headers: {

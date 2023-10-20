@@ -6,7 +6,6 @@ import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
 import AddProducts from "./pages/AddProducts/AddProducts";
 import PrivateAddProducts from "./PrivateRoutes/PrivateAddProducts";
-// import Products from "./pages/Products/Products";
 import NikeProducts from "./pages/DynamicProductPages/NikeProducts";
 import AdidasProducts from "./pages/DynamicProductPages/AdidasProducts";
 import GucciProducts from "./pages/DynamicProductPages/GucciProducts";
@@ -50,14 +49,14 @@ const router = createBrowserRouter([
       // {
       //   path: "/products",
       //   element: <Products></Products>,
-      //   loader: () => fetch("https://elite-ensemble-emporium-server-o7xy7v2wj.vercel.app/products"),
+      //   loader: () => fetch("https://elite-ensemble-emporium-server.vercel.app/products"),
       // },
       {
         path: "/nike-products",
         element: <NikeProducts></NikeProducts>,
         loader: () =>
           fetch(
-            "https://elite-ensemble-emporium-server-o7xy7v2wj.vercel.app/nike-products"
+            "https://elite-ensemble-emporium-server.vercel.app/nike-products"
           ),
       },
       {
@@ -65,7 +64,7 @@ const router = createBrowserRouter([
         element: <AdidasProducts></AdidasProducts>,
         loader: () =>
           fetch(
-            "https://elite-ensemble-emporium-server-o7xy7v2wj.vercel.app/adidas-products"
+            "https://elite-ensemble-emporium-server.vercel.app/adidas-products"
           ),
       },
       {
@@ -73,16 +72,18 @@ const router = createBrowserRouter([
         element: <GucciProducts></GucciProducts>,
         loader: () =>
           fetch(
-            "https://elite-ensemble-emporium-server-o7xy7v2wj.vercel.app/gucci-products"
+            "https://elite-ensemble-emporium-server.vercel.app/gucci-products"
           ),
         // https://elite-ensemble-emporium-server-nabi9z1t2.vercel.app/
+
+        // https://elite-ensemble-emporium-server.vercel.app/
       },
       {
         path: "/hermes-products",
         element: <HermesProducts></HermesProducts>,
         loader: () =>
           fetch(
-            "https://elite-ensemble-emporium-server-o7xy7v2wj.vercel.app/hermes-products"
+            "https://elite-ensemble-emporium-server.vercel.app/hermes-products"
           ),
       },
       {
@@ -90,7 +91,7 @@ const router = createBrowserRouter([
         element: <TiffanyProducts></TiffanyProducts>,
         loader: () =>
           fetch(
-            "https://elite-ensemble-emporium-server-o7xy7v2wj.vercel.app/tiffany-products"
+            "https://elite-ensemble-emporium-server.vercel.app/tiffany-products"
           ),
       },
       {
@@ -98,7 +99,7 @@ const router = createBrowserRouter([
         element: <ZaraProducts></ZaraProducts>,
         loader: () =>
           fetch(
-            "https://elite-ensemble-emporium-server-o7xy7v2wj.vercel.app/zara-products"
+            "https://elite-ensemble-emporium-server.vercel.app/zara-products"
           ),
       },
       {
@@ -110,7 +111,7 @@ const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(
-            `https://elite-ensemble-emporium-server-o7xy7v2wj.vercel.app/products/${params.id}`
+            `https://elite-ensemble-emporium-server.vercel.app/products/${params.id}`
           ),
       },
       {
@@ -121,9 +122,7 @@ const router = createBrowserRouter([
           </PrivateCart>
         ),
         loader: () =>
-          fetch(
-            "https://elite-ensemble-emporium-server-o7xy7v2wj.vercel.app/cart"
-          ),
+          fetch("https://elite-ensemble-emporium-server.vercel.app/cart"),
       },
       {
         path: "/update-product/:id",
@@ -134,7 +133,7 @@ const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(
-            `https://elite-ensemble-emporium-server-o7xy7v2wj.vercel.app/products/${params.id}`
+            `https://elite-ensemble-emporium-server.vercel.app/products/${params.id}`
           ),
       },
     ],

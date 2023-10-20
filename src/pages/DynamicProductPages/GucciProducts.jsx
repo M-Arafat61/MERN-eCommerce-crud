@@ -6,7 +6,7 @@ import { Link, useLoaderData } from "react-router-dom";
 const GucciProducts = () => {
   const gucciProducts = useLoaderData();
   return (
-    <div className='grid md:grid-cols-2 gap-5 '>
+    <div className=''>
       <div className='max-w-6xl m-auto space-y-10'>
         <Navbar></Navbar>
 
