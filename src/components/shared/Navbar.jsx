@@ -103,7 +103,7 @@ const Navbar = () => {
               <Link>
                 <button
                   onClick={handleUserLogOut}
-                  className='text-sm   hover:btn-outline font-medium'
+                  className='text-sm   hover:btn-outline btn btn-ghost font-medium'
                 >
                   Logout
                 </button>

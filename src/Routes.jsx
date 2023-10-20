@@ -75,6 +75,7 @@ const router = createBrowserRouter([
           fetch(
             "https://elite-ensemble-emporium-server-o7xy7v2wj.vercel.app/gucci-products"
           ),
+        // https://elite-ensemble-emporium-server-nabi9z1t2.vercel.app/
       },
       {
         path: "/hermes-products",
