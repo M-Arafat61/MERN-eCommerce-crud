@@ -40,7 +40,7 @@ const CartCard = ({ item, cart, setCart }) => {
       <div className='card card-compact  bg-base-100 shadow-md '>
         <figure>
           <img
-            className='w-[300px] h-[400px] object-cover'
+            className='w-[300px] h-[280px] object-cover'
             src={image}
             alt='cart image'
           />
@@ -51,7 +51,7 @@ const CartCard = ({ item, cart, setCart }) => {
           <div className='card-actions '>
             <button
               onClick={() => handleRemove(_id)}
-              className='btn btn-primary'
+              className='btn btn-warning'
             >
               Remove Item
             </button>

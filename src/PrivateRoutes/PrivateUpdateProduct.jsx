@@ -7,7 +7,7 @@ const PrivateUpdateProduct = ({ children }) => {
   const location = useLocation();
 
   if (loading) {
-    return <h1 className='text-3xl text-center'>Loading...</h1>;
+    return <h1 className='text-3xl text-center '>Loading...</h1>;
   }
 
   if (user) {

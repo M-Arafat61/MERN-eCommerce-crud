@@ -9,20 +9,48 @@ import Zara from "../../components/Brands/Zara";
 import Hermes from "../../components/Brands/Hermes";
 import Gucci from "../../components/Brands/Gucci";
 import Tiffany from "../../components/Brands/Tiffany";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Home = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      disable: "mobile",
+      startEvent: "DOMContentLoaded",
+      initClassName: "aos-init",
+      animatedClassName: "aos-animate",
+      useClassNames: true,
+      disableMutationObserver: false,
+      debounceDelay: 50,
+      throttleDelay: 99,
+
+      offset: 300,
+      delay: 100,
+
+      easing: "ease",
+      once: false,
+      mirror: false,
+      anchorPlacement: "top-bottom",
+    });
+  }, []);
+
   return (
     <div className='max-w-6xl m-auto dark:bg-dark dark:text-light'>
       <Navbar />
       <Banner></Banner>
       <Services></Services>
 
-      <div className='mt-10 mb-10 flex flex-col items-center justify-center space-y-3'>
+      <div
+        data-aos='zoom-in-down'
+        className='mt-10 mb-10 flex flex-col items-center justify-center space-y-3'
+      >
         <p className='text-2xl md:text-4xl font-bold'>Explore Global Brands </p>
         <div className='w-48 bg-gray-500 h-1 '></div>
       </div>
 
-      <div className='grid md:grid-cols-2'>
+      <div data-aos='zoom-in-down' className='grid md:grid-cols-2'>
         <Nike></Nike>
         <Adidas></Adidas>
         <Zara></Zara>

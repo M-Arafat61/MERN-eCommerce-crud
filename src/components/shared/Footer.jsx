@@ -1,8 +1,10 @@
+import sLogo from "/shop.svg";
+
 const Footer = () => {
   return (
     <footer className='footer p-10 '>
       <aside>
-        <img className='w-12' src='https://i.ibb.co/5rYWrW8/cap.png' alt='' />
+        <img className='w-12' src={sLogo} alt='' />
         <p>
           <span className='text-lg font-semibold'>Elite Emporium</span>
           <br />
@@ -41,7 +43,7 @@ const Footer = () => {
               placeholder='username@site.com'
               className='input input-bordered w-full pr-16'
             />
-            <button className='btn btn-primary absolute top-0 right-0 rounded-l-none'>
+            <button className='btn btn-primary bg-blue-500 absolute top-0 right-0 rounded-l-none'>
               Subscribe
             </button>
           </div>
