@@ -46,11 +46,6 @@ const router = createBrowserRouter([
           </PrivateAddProducts>
         ),
       },
-      // {
-      //   path: "/products",
-      //   element: <Products></Products>,
-      //   loader: () => fetch("https://elite-ensemble-emporium-server-lq165v8ny.vercel.app/products"),
-      // },
 
       {
         path: "/nike-products",
@@ -75,9 +70,6 @@ const router = createBrowserRouter([
           fetch(
             "https://elite-ensemble-emporium-server-lq165v8ny.vercel.app/gucci-products"
           ),
-        // https://elite-ensemble-emporium-server-nabi9z1t2.vercel.app/
-
-        // https://elite-ensemble-emporium-server-lq165v8ny.vercel.app/
       },
       {
         path: "/hermes-products",
